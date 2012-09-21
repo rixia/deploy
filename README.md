@@ -25,10 +25,6 @@ Open your terminal and something we want to observe. In this example, you may op
 Type `ps aux` or `ps fax` in terminal. ps is a built-in program help us to list all running processes.
 You may look and/or download source code from [proceps homepage](http://procps.sourceforge.net)
 
-[img1]
-
-
-
 ### Step 3
 
 Type `ps fax | grep firefox` to find the pid of running Firefox.
@@ -225,16 +221,6 @@ Shared memory maps the same memory page to different processes. To use shared me
 
 We can use command `ipcs -a` to list all shared memory blocks that we are using now. Those shared memory will be alive until we reboot. We can use command `ipcrm` to remove a shared memory block or use [shm_ctl()]() to manage shared memory.
 
-## Shared memory example 1
-
-## Shared memory example 2 
-
-
----
-
-
-
-
 ---
 
 # Homework Submission
@@ -275,12 +261,9 @@ Your shell should run programs by [exec family function](http://pubs.opengroup.o
 * 20% Your program can execute most 3 commands and connect them using pipe.
 * 20% Your program can redirect stderr msg.
 
-
-
-
 ### Extra:
 * +10% if your program can deal with most 100 commands.
-* +0%~5% if you provide a .git directory .
+* +0% if you provide a .git directory. (However, .git log may prove that your code is origin.)
 * -8%~80% if your code is (very similiar to / exactly the same as) any others' code. 
 
 ## Gently reminding
