@@ -221,6 +221,12 @@ Shared memory maps the same memory page to different processes. To use shared me
 
 We can use command `ipcs -a` to list all shared memory blocks that we are using now. Those shared memory will be alive until we reboot. We can use command `ipcrm` to remove a shared memory block or use [shm_ctl()]() to manage shared memory.
 
+## Shared memory example 1
+
+## Shared memory example 2
+
+## Shared memory example 3
+
 ---
 
 # Homework Submission
@@ -229,7 +235,7 @@ In this homework, you will implement a very simple shell called **Y-SHELL**.
 
 ## Your Y-SHELL can:
 
-* Detects user's Ctrl+C, then print "Bye Bye~" and exit. (Ctrl+C is SIGINT.)
+* Detects user's Ctrl+C, then print "Bye Bye~" and exit. (Hint. Ctrl+C is SIGINT.)
 * Executes programs. For example: `ls`
 * Executes programs with arguments. For example: `ls -l -a`
 * Pipes data from one command to another command. For example : `ls -l -a | grep .txt | grep rwx` (There would be at most three command. i.e. `A | B | C`)
@@ -248,7 +254,7 @@ Your shell should run programs by [exec family function](http://pubs.opengroup.o
 * The length of command is less than 3000. For example: The length of `ls | grep .txt` is 14.
 * Every command would execute successfully. For example: `ls | grep txt | grep rwx` You don't need to worry about if `grep txt` failed.
 * You may create your FIFO by command `mkfifo`. And use a fixed FIFO name if you need to.
-* You just need to dup a "O_WRONLY | O_NONBLOCK" FIFO to stderr. If you successfully dup FIFO to stderr, the stderr outputed by commands will disappear. If you dup a nonblock FIFO to stderr and this FIFO is not ready yet, the stderr may appear. That is fine for this homework. => i.e. In this homework, we don't care stderr disappear or notD.
+* You just need to dup a "O_WRONLY | O_NONBLOCK" FIFO to stderr. If you successfully dup FIFO to stderr, the stderr outputed by commands will disappear. If you dup a nonblock FIFO to stderr and this FIFO is not ready yet, the stderr may appear. That is fine for this homework. => i.e. In this homework, we don't care stderr disappear or not.
 
 ## Grade :
 

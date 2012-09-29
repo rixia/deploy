@@ -2,6 +2,7 @@
 files = fork_example1 fork_example2 fd_example1 fd_example2 signal_example1 signal_example2 
 files += pipe_example1 pipe_example2 pipe_example3
 files += FIFO_example1 FIFO_example2
+files += shared_memory_example1 shared_memory_example2 shared_memory_example3
 
 main:
 	$(foreach files, $(files), gcc $(files).c -o $(files).out;)
